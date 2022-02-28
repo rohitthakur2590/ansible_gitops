@@ -1,1 +1,5 @@
+# ignore inventory file
 inventory
+
+# ignore swap files
+*.swp

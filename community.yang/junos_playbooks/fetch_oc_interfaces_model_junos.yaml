@@ -1,0 +1,11 @@
+---
+- name: Fetch Yang Schema Playbook
+  gather_facts: no
+  hosts: junos_local
+  collections:
+    - community.yang
+  tasks:
+    - name: Fetch given yang model and it’s dependent models from remote host
+      community.yang.fetch:
+        name: openconfig-interfaces
+        dir: "./fixtures/{{inventory_hostname}}/models/yang_files"
