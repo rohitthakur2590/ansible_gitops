@@ -1,5 +1,5 @@
 ---
-- name: Fetch Yang Schema Playbook
+- name: Fetch Specific Yang (Model) Schema
   gather_facts: no
   hosts: iosxr_lab
   collections:
