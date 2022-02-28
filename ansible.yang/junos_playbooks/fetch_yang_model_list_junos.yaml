@@ -1,0 +1,10 @@
+---
+- name: Fetch Yang List Playbook
+  gather_facts: no
+  hosts: junos_local
+  collections:
+    - ansible.yang
+  tasks:
+    - name: Fetch given yang model and it’s dependent models from remote host
+      ansible.yang.fetch:
+      register: yang_list
