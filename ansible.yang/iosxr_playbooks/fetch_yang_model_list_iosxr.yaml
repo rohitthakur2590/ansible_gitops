@@ -1,10 +1,10 @@
 ---
-- name: Fetch Yang List Playbook
+- name: Fetch List of Supported Yang Models
   gather_facts: no
   hosts: iosxr_lab
   collections:
     - community.yang
   tasks:
-    - name: Fetch given yang model and it’s dependent models from remote host
+    - name: Fetch List of supported yang models
       community.yang.fetch:
       register: yang_list
